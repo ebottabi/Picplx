@@ -1,0 +1,5 @@
+Hey ${user.username}, 
+
+Please confirm your registration by clicking on @@{Session.confirmRegistration(user.needConfirmation)}
+
+Thanks !

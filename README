@@ -1,0 +1,4 @@
+Picplx
+Its a picplz or an instagram clone written on playframework, mongodb, mysql, redis, beanstalkd, node.js.
+We originally development of the app was on Django framework, so decided to port it to Java using playframework in just three weeks, so we are on our last week.
+There is alot of Todo and features to release, as well as we will open source the android app. 

@@ -1,0 +1,59 @@
+#{extends 'session.html' /}
+#{set title:'Login' /}
+
+
+<div class="clearfix wrap">
+        <section id="content">
+          
+<h2>Login to Picplx</h2>
+ <div id="notice">
+    #{ifErrors}
+    <h2>Oops, please correct these errors</h2>
+      <ul>
+        #{errors}
+            <li>${error}</li>
+        #{/errors}
+    </ul>
+    #{/ifErrors}  
+    #{if flash?.error}
+		<div class="error" style="font-size:14px; color:red;">${flash.error}</div><br>
+	#{/if}
+	
+	#{if flash?.success}
+		<div class="error" style="font-size:14px;">${flash.success}</div><br>
+	#{/if}
+ </div>
+<form accept-charset="UTF-8" action="/__session/__login" class="auth" id="user_new" method="post">
+
+  <label for="user_login">Username or Email</label>
+  <div class="field"><input id="login" name="login" size="30" type="text"></div>
+
+  <label for="user_password">Password</label>
+  <div class="field"><input id="password" name="password" size="30" type="password"></div>
+
+    <div class="checkbox"><input checked="checked" id="remember_me" name="remember_me" type="checkbox" value="1"> <label for="user_remember_me">Remember me</label></div>
+
+  <hr>
+
+  <div class="controls clearfix">
+    <div class="to_left gray links">
+
+  <a href="/__session/__forgot_password">Forgot your password?</a><br>
+
+
+
+    </div>
+    <div class="to_right">
+      <input class="button blue big next" name="commit" type="submit" value="Login">
+    </div>
+  </div>
+</form>
+<div id="social_links">
+  <!--<div class="arrow"></div>-->
+  <p>Or sign in using your existing account at:</p>
+ <a href="/oauth/facebook"><img alt="Facebook" src="@{'public/images/connect-with-facebook.png'}"></a>
+    <a href="/oauth/twitter"><img alt="Twitter" src="@{'public/images/connect-with-twitter.png'}"></a>    
+     </div>
+
+        </section>
+      </div>

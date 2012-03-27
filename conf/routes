@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET    /__getstarted                            Application.__getstarted
+GET    /help                                    Application.help
+GET    /api                                     Application.api
+GET    /terms                                   Application.terms
+GET    /privacy                                 Application.privacy
+GET    /__session/__login                       Session.__login
+POST    /__session/__login                      Session.__dologin
+GET    /__session/__register                    Session.__register
+POST    /__session/__register                   Session.__doregister
+GET    /__session/__forgot_password             Session.__forgot_password
+POST    /__session/__forgot_password            Session.__doforgot_password
+GET    /__session/__reset_password              Session.__reset_password
+POST    /__session/__reset_password             Session.__doreset_password
+POST    /session/reset                          Session.__doreset
+
+GET    /session/twitter                         Session.twitter
+GET    /session/facebook                        Session.facebook
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

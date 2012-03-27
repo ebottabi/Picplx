@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>picplx</name>
+        </general-data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/2">
+            <!-- Do not use Project Properties customizer when editing this file manually. -->
+            <name>picplx</name>
+            <properties>
+                <property name="ant.script">C:\play\framework\build.xml</property>
+                <property name="application.path">C:\picplx</property>
+                <property name="application.name">picplx</property>
+            </properties>
+            <folders>
+                <source-folder>
+                    <label>.</label>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>app</label>
+                    <type>java</type>
+                    <location>app</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>test</label>
+                    <type>java</type>
+                    <location>test</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+            	<action name="clean">
+                    <script>${ant.script}</script>
+                    <target>doNothing</target>
+                    <property name="application.path">${application.path}</property>
+                </action>
+                <action name="build">
+                    <script>${ant.script}</script>
+                    <target>doNothing</target>
+                    <property name="application.path">${application.path}</property>
+                </action>
+                <action name="rebuild">
+                    <script>${ant.script}</script>
+                    <target>doNothing</target>
+                    <property name="application.path">${application.path}</property>
+                </action>
+                <action name="run">
+                    <script>${ant.script}</script>
+                    <target>nb-run-application</target>
+                    <property name="application.path">${application.path}</property>
+                </action>
+                <action name="debug">
+                    <script>${ant.script}</script>
+                    <target>nb-debug</target>
+                    <property name="application.name">${application.name}</property>
+                    <property name="application.path">${application.path}</property>
+                </action>
+                <action name="test">
+                    <script>${ant.script}</script>
+                    <target>test-application</target>
+                    <property name="application.path">${application.path}</property>
+                </action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>app</label>
+                        <location>app</location>
+                        <excludes>views/**</excludes>
+                    </source-folder>
+                    <source-folder style="tree">
+                        <label>app/views</label>
+                        <location>app/views</location>
+                    </source-folder>
+                    <source-folder style="tree">
+                        <label>public</label>
+                        <location>public</location>
+                    </source-folder>
+                    <source-folder style="tree">
+                        <label>conf</label>
+                        <location>conf</location>
+                    </source-folder>
+                    <source-folder style="packages">
+                        <label>test</label>
+                        <location>test</location>
+                    </source-folder>   
+                    <source-folder style="tree"><label>eclipse</label><location>eclipse</location></source-folder>                 
+                </items>
+                <context-menu>
+                    <ide-action name="run"/>
+                    <ide-action name="debug"/>
+                    <ide-action name="test"/>
+                </context-menu>
+            </view>
+            <subprojects/>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
+            <compilation-unit>
+                <package-root>app</package-root>
+                <package-root>test</package-root>
+                
+                <classpath mode="compile">C:\picplx\conf;C:\play\framework\play-1.2.4.jar;C:\play\framework\lib\activation-1.1.1.jar;C:\play\framework\lib\antlr-2.7.6.jar;C:\play\framework\lib\asm-all-3.3.1.jar;C:\play\framework\lib\async-http-client-1.6.5.jar;C:\play\framework\lib\bcprov-jdk15-1.45.jar;C:\play\framework\lib\c3p0-0.9.1.2.jar;C:\play\framework\lib\cglib-nodep-2.2.jar;C:\play\framework\lib\commons-beanutils-1.8.3.jar;C:\play\framework\lib\commons-codec-1.4.jar;C:\play\framework\lib\commons-collections-3.2.1.jar;C:\play\framework\lib\commons-email-1.2.jar;C:\play\framework\lib\commons-fileupload-1.2.2.jar;C:\play\framework\lib\commons-io-2.0.1.jar;C:\play\framework\lib\commons-javaflow-1066591.jar;C:\play\framework\lib\commons-lang-2.6.jar;C:\play\framework\lib\commons-logging-1.1.1.jar;C:\play\framework\lib\dom4j-1.6.1.jar;C:\play\framework\lib\ehcache-core-2.0.0.jar;C:\play\framework\lib\ezmorph-1.0.3.jar;C:\play\framework\lib\geronimo-servlet_2.5_spec-1.2.jar;C:\play\framework\lib\groovy-all-1.7.10.jar;C:\play\framework\lib\gson-1.7.1.jar;C:\play\framework\lib\h2-1.3.149.jar;C:\play\framework\lib\hibernate-commons-annotations-3.2.0.Final.jar;C:\play\framework\lib\hibernate-core-3.6.1.Final.jar;C:\play\framework\lib\hibernate-entitymanager-3.6.0.Final.jar;C:\play\framework\lib\hibernate-jpa-2.0-api-1.0.0.Final.jar;C:\play\framework\lib\ivy-2.2.0.jar;C:\play\framework\lib\jamon-2.7.jar;C:\play\framework\lib\javassist-3.9.0.GA.jar;C:\play\framework\lib\javax.inject-1.0.jar;C:\play\framework\lib\jaxen-1.1.jar;C:\play\framework\lib\jj-imaging.jar;C:\play\framework\lib\jj-simplecaptcha.jar;C:\play\framework\lib\jj-textile.jar;C:\play\framework\lib\jj-wikitext.jar;C:\play\framework\lib\joda-time-2.0.jar;C:\play\framework\lib\jregex-1.2_01.jar;C:\play\framework\lib\jsr107cache-1.0.jar;C:\play\framework\lib\jta-1.1.jar;C:\play\framework\lib\junit-4.8.1.jar;C:\play\framework\lib\log4j-1.2.16.jar;C:\play\framework\lib\mail-1.4.3.jar;C:\play\framework\lib\memcached-2.6.jar;C:\play\framework\lib\mysql-connector-java-5.1.13.jar;C:\play\framework\lib\netty-3.2.5.Final.jar;C:\play\framework\lib\org.eclipse.jdt.core-3.8.0.v_C03.jar;C:\play\framework\lib\oval-1.50.jar;C:\play\framework\lib\postgresql-9.0.jar;C:\play\framework\lib\signpost-core-1.2.jar;C:\play\framework\lib\slf4j-api-1.6.1.jar;C:\play\framework\lib\slf4j-log4j12-1.6.1.jar;C:\play\framework\lib\snakeyaml-1.7.jar;C:\play\framework\lib\xstream-1.3.jar;nbproject\classes;C:\play\framework\src</classpath>
+                <built-to>nbproject/classes</built-to>  
+                <source-level>1.5</source-level>                 
+            </compilation-unit>
+        </java-data>
+    </configuration>
+</project>
